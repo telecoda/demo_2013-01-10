@@ -1,0 +1,15 @@
+@(messages: List[com.twilio.sdk.resource.instance.Sms])
+
+@main("Messages") {
+    
+    <h1>Messages</h1>
+    
+	<table>
+		@for(n <- messages) {
+		<tr><td>@n.getBody</td>
+			<td>@n.getPrice</td>
+			<td>@n.getFrom</td>
+			</tr>
+		}
+		</table>
+}
