@@ -7,9 +7,16 @@ GET     /                           controllers.Application.index()
 POST    /sms                        controllers.Application.sms()
 GET     /messages                   controllers.Application.messages()
 GET     /twoStep                    controllers.Application.twoStep()
-POST    /code                        controllers.Application.code()
-POST    /valid                       controllers.Application.valid()
+POST    /code                       controllers.Application.code()
+POST    /valid                      controllers.Application.valid()
 POST    /call                       controllers.Application.call()
+
+# Conference & Recording Controllers:
+POST    /dialIn                     controllers.Conference.dialIn()
+POST    /join                       controllers.Conference.join()
+POST    /botCycle                   controllers.Conference.botCycle()
+POST    /record                     controllers.Conference.record()
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
